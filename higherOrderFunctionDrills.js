@@ -71,7 +71,7 @@ function hazardWarningCreator(typeOfWarning) {
         }
         console.log(`Danger! there is a ${typeOfWarning} hazard at ${location}!`);
         console.log(`The ${typeOfWarning} hazard alert has triggered ${warningCounter} ${timeOrTimes} today!`);
-}
+    }
 }
 const rocksWarning = hazardWarningCreator('Rocks on the Road');
 const smogWarning = hazardWarningCreator('Hard to Breathe');
@@ -102,3 +102,27 @@ const playByPlay = turtleMover.forEach(function(item) {
     console.log(`The turtle took ${item[0]} step(s) forward and ${item[1]} step(s) to the left!`)
 });
 
+
+//------------------------------
+// 5 reduce
+
+// This is the encoded message
+const theInput = 'noggin oreo the moon time tele steed his tent apollo her lives though shoo tofu budapest';
+
+// This is the function to decode it
+function decodeMaster(encryptMessage) {
+    let theMessage = '';
+    let arrayOfWords = encryptMessage.split(' ');
+
+    for (let i = 0; i < arrayOfWords.length; i++) {
+        if (arrayOfWords[i].length === 3) {
+            theMessage += ' ';
+        } else {
+            theMessage += arrayOfWords[i][arrayOfWords[i].length-1].toUpperCase();
+        }
+    }
+    return theMessage;
+}
+
+// This tests the whole enchillada
+decodeMaster(theInput);
