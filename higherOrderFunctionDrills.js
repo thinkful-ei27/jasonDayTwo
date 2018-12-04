@@ -1,5 +1,9 @@
 // https://github.com/rich-at-thinkful/ft-curric-gists/blob/master/fundamentals/higher-order-functions-drills.md
+
+
 // 1 Functions as Arguments Drill
+
+
 function repeat(fn, n) {
     for (let i = 0; i<n; i++) {
         fn();
@@ -19,6 +23,8 @@ repeat(goodbye, 5);
 
 
 // 2 Functions as Arguments Drill
+
+
 function filter(arr, fn) {
     let newArray = [];
     for (let i = 0; i < arr.length; i++) {
@@ -45,7 +51,10 @@ const filteredNames = filter(myNames, function(name) {
 console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
+
 // 3 Functions as Return Values
+
+
 function hazardWarningCreator(typeOfWarning) {
     let warningCounter = 0;
     let timeOrTimes = "";
@@ -72,3 +81,19 @@ rocksWarning('Centinela Ave and Olympic Blvd');
 impactWarning('North America');
 impactWarning('North Sea');
 
+
+//  4 forEach, filter, and map
+
+
+const turtleMover = [[0, 0], [0, 5], [-1, -3], [-3, 1], [2, -4], [3, 2]];
+let totalSteps = 0;
+
+const positives = turtleMover.filter(steps => steps[0] >= 0 && steps[1] >= 0);
+console.log(positives);
+
+const incrementalSteps = turtleMover.map(item => item[0] + item[1]);
+console.log(incrementalSteps);
+
+const playByPlay = turtleMover.forEach(function(item) {
+    console.log(`The turtle took ${item[0]} step(s) forward and ${item[1]} step(s) to the left!`)
+});
