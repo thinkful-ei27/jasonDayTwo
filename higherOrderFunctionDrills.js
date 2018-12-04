@@ -1,7 +1,8 @@
 // https://github.com/rich-at-thinkful/ft-curric-gists/blob/master/fundamentals/higher-order-functions-drills.md
 
 
-// 1 Functions as Arguments Drill
+//------------------------------
+// 1 Functions as Arguments Drill #1
 
 
 function repeat(fn, n) {
@@ -22,7 +23,8 @@ repeat(hello, 5);
 repeat(goodbye, 5);
 
 
-// 2 Functions as Arguments Drill
+//------------------------------
+// 2 Functions as Arguments Drill #2
 
 
 function filter(arr, fn) {
@@ -52,6 +54,7 @@ console.log(filteredNames) // => ['Rich', 'Ray']
 // <---- DO NOT EDIT BETWEEN THESE LINES
 
 
+//------------------------------
 // 3 Functions as Return Values
 
 
@@ -82,6 +85,7 @@ impactWarning('North America');
 impactWarning('North Sea');
 
 
+//------------------------------
 //  4 forEach, filter, and map
 
 
@@ -97,3 +101,4 @@ console.log(incrementalSteps);
 const playByPlay = turtleMover.forEach(function(item) {
     console.log(`The turtle took ${item[0]} step(s) forward and ${item[1]} step(s) to the left!`)
 });
+
